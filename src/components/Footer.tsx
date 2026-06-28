@@ -54,7 +54,7 @@ export function Footer() {
       <div className="border-t border-paper/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-5 font-mono text-[0.68rem] uppercase tracking-[0.18em] text-paper/50 sm:flex-row sm:px-6">
           <span>© {new Date().getFullYear()} Wear Happiness</span>
-          <span>Made by the metre</span>
+          <span>Made with Happiness</span>
         </div>
       </div>
     </footer>

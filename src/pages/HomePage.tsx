@@ -72,7 +72,7 @@ export function HomePage() {
       {/* Atelier note — a quiet brand moment */}
       <section className="bg-ink text-paper">
         <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 py-16 sm:px-6 md:grid-cols-[0.6fr_1fr]">
-          <p className="eyebrow text-marigold">By the metre</p>
+          <p className="eyebrow text-marigold">By Happiness</p>
           <p className="font-display text-2xl font-medium leading-snug sm:text-3xl">
             Buy the cloth, keep the choice. Our unstitched fabrics ship with composition and width on
             every ticket — tailor them exactly to you.

@@ -25,7 +25,7 @@ export function Wordmark({
           {HAPPINESS.split('').map((ch, i) => (
             <span
               key={i}
-              className="inline-block [animation:letter-jump_2.4s_ease-in-out_infinite]"
+              className="inline-block [animation:letter-jump_302s_ease-in-out_infinite]"
               style={{ animationDelay: `${i * 0.07}s` }}
             >
               {ch}

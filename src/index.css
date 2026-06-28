@@ -98,18 +98,29 @@
   }
 }
 
-/* Joyful per-letter bounce for the "Happiness" wordmark. A short hop early
-   in the cycle, staggered per letter, makes the word ripple then rest. */
+/* Joyful per-letter bounce for the "Happiness" wordmark.
+   The animation runs over a 302s cycle: a ~2s burst of hops at the start
+   (so it plays on every page load), then ~5 minutes of rest, then again.
+   Hops are confined to the first ~0.66% of the timeline (≈2s of 302s);
+   the rest of the cycle holds still. */
 @keyframes letter-jump {
-  0%,
-  28%,
-  100% {
+  0% {
     transform: translateY(0) rotate(0deg);
   }
-  10% {
+  0.12% {
     transform: translateY(-0.36em) rotate(-6deg);
   }
-  19% {
-    transform: translateY(0) rotate(4deg);
+  0.24% {
+    transform: translateY(0) rotate(3deg);
+  }
+  0.36% {
+    transform: translateY(-0.26em) rotate(-4deg);
+  }
+  0.48% {
+    transform: translateY(0) rotate(2deg);
+  }
+  0.6%,
+  100% {
+    transform: translateY(0) rotate(0deg);
   }
 }
