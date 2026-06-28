@@ -44,7 +44,7 @@ export const products: Product[] = [
     material: '100% Cotton, Hand Embroidery',
     description:
       'A soft cotton kurta finished with subtle tonal embroidery at the neckline. Light, structured and easy to layer.',
-    images: ['/products/cotton-kurta.svg'],
+    images: ['/products/cotton-kurta.jpg'],
     sizes: RTW_SIZES,
     isNew: true,
   },
