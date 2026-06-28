@@ -196,7 +196,7 @@ export const products: Product[] = [
     material: '100% Silk',
     description:
       'A featherweight silk wrap that doubles as a shawl or scarf. The finishing touch to any look.',
-    images: ['/products/silk-wrap.svg'],
+    images: ['/products/silk-wrap.jpg'],
     sizes: ONE_SIZE,
     isSale: true,
   },
