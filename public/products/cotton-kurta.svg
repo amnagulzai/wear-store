@@ -1,9 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000" role="img" aria-label="Cotton Kurta">
-  <rect width="800" height="1000" fill="#a7b5a0"/>
-  <g fill="#54624c" opacity="0.9">
-    <path d="M400 210c-46 0-84 30-96 72l-92 36c-14 6-20 22-13 36l40 78c6 12 21 17 33 11l28-14v320c0 13 11 24 24 24h252c13 0 24-11 24-24V429l28 14c12 6 27 1 33-11l40-78c7-14 1-30-13-36l-92-36c-12-42-50-72-96-72z"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000" role="img" aria-label="Embroidered Kurta">
+  <defs><pattern id="twill" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="14" stroke="#ffffff" stroke-width="6" opacity="0.06"/>
+    </pattern></defs>
+  <rect width="800" height="1000" fill="#7c8166"/>
+  <rect width="800" height="1000" fill="url(#twill)"/>
+
+  <!-- selvedge stripe -->
+  <rect x="0" y="0" width="10" height="1000" fill="#d99a2b"/>
+
+  <!-- grain-line marker (textile cut symbol) -->
+  <g stroke="#f7f4ec" stroke-width="2" fill="none" opacity="0.55">
+    <line x1="400" y1="300" x2="400" y2="620"/>
+    <path d="M391 314 L400 300 L409 314"/>
+    <path d="M391 606 L400 620 L409 606"/>
   </g>
-  <circle cx="400" cy="180" r="40" fill="#54624c" opacity="0.9"/>
-  <text x="400" y="900" font-family="Georgia, serif" font-size="46" fill="#ffffff" text-anchor="middle" opacity="0.95">Cotton Kurta</text>
-  <text x="400" y="950" font-family="Inter, sans-serif" font-size="26" fill="#ffffff" text-anchor="middle" opacity="0.7" letter-spacing="3">WS-2402</text>
+
+  <!-- mill-ticket strip -->
+  <rect x="0" y="860" width="800" height="140" fill="#f7f4ec"/>
+  <rect x="0" y="860" width="10" height="140" fill="#d99a2b"/>
+  <text x="34" y="926" font-family="'Fraunces', Georgia, serif" font-size="45" font-weight="600" fill="#1d2347">Embroidered Kurta</text>
+  <text x="34" y="970" font-family="'Spline Sans Mono', monospace" font-size="26" letter-spacing="2" fill="#1d2347" opacity="0.8">WS-2402 · 100% COTTON</text>
 </svg>

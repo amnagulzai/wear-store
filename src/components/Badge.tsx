@@ -6,9 +6,9 @@ export function Badge({ variant }: { variant: Variant }) {
   return (
     <span
       className={clsx(
-        'rounded-full px-2.5 py-1 text-xs font-semibold uppercase tracking-wide',
-        variant === 'new' && 'bg-brand text-white',
-        variant === 'sale' && 'bg-sale text-white',
+        'rounded-sm px-2 py-1 font-mono text-[0.6rem] font-medium uppercase tracking-[0.16em]',
+        variant === 'new' && 'bg-ink text-paper',
+        variant === 'sale' && 'bg-madder text-paper',
       )}
     >
       {variant === 'new' ? 'New' : 'Sale'}

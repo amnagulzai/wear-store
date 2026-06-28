@@ -19,10 +19,10 @@ export function ProductPage() {
 
   if (!product) {
     return (
-      <div className="mx-auto max-w-7xl px-4 py-20 text-center sm:px-6">
+      <div className="mx-auto max-w-7xl px-4 py-24 text-center sm:px-6">
         <h1 className="font-display text-3xl font-semibold">Product not found</h1>
-        <Link to="/" className="mt-4 inline-block text-accent hover:underline">
-          Back to home
+        <Link to="/" className="mt-4 inline-block font-mono text-xs uppercase tracking-[0.14em] text-woad hover:text-ink">
+          ← Back to home
         </Link>
       </div>
     )
@@ -41,28 +41,35 @@ export function ProductPage() {
     window.setTimeout(() => setAdded(false), 2500)
   }
 
+  const spec: [string, string][] = [
+    ['Style', product.styleCode],
+    ['Composition', product.material],
+    ['Category', category?.name ?? '—'],
+    ['Sizes', product.sizes.join(' · ')],
+  ]
+
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6">
-      <nav className="mb-6 text-sm text-muted">
+      <nav className="mb-8 font-mono text-[0.7rem] uppercase tracking-[0.13em] text-muted">
         <Link to="/" className="hover:text-ink">
           Home
         </Link>
         {category && (
           <>
-            {' / '}
+            <span className="px-2">/</span>
             <Link to={`/category/${category.slug}`} className="hover:text-ink">
               {category.name}
             </Link>
           </>
         )}
-        {' / '}
+        <span className="px-2">/</span>
         <span className="text-ink">{product.name}</span>
       </nav>
 
-      <div className="grid gap-10 lg:grid-cols-2">
+      <div className="grid gap-12 lg:grid-cols-2">
         {/* Gallery */}
         <div>
-          <div className="overflow-hidden rounded-lg bg-cream">
+          <div className="overflow-hidden rounded-sm bg-ecru">
             <img
               src={product.images[activeImage]}
               alt={product.name}
@@ -77,8 +84,8 @@ export function ProductPage() {
                   type="button"
                   onClick={() => setActiveImage(i)}
                   className={
-                    'h-20 w-16 overflow-hidden rounded border ' +
-                    (i === activeImage ? 'border-brand' : 'border-transparent')
+                    'h-20 w-16 overflow-hidden rounded-sm border ' +
+                    (i === activeImage ? 'border-ink' : 'border-transparent')
                   }
                   aria-label={`View image ${i + 1}`}
                 >
@@ -90,45 +97,65 @@ export function ProductPage() {
         </div>
 
         {/* Details */}
-        <div>
-          <h1 className="font-display text-3xl font-semibold">{product.name}</h1>
-          <p className="mt-1 text-sm uppercase tracking-wide text-muted">{product.styleCode}</p>
+        <div className="lg:pt-2">
+          <p className="eyebrow text-marigold">{product.styleCode}</p>
+          <h1 className="mt-3 font-display text-4xl font-semibold tracking-tight">{product.name}</h1>
           <div className="mt-4">
             <Price product={product} size="lg" />
           </div>
 
-          <p className="mt-6 leading-relaxed text-brand-soft">{product.description}</p>
-          <p className="mt-4 text-sm text-muted">
-            <span className="font-medium text-ink">Material:</span> {product.material}
-          </p>
+          <p className="mt-7 leading-relaxed text-muted">{product.description}</p>
 
-          <div className="mt-8">
-            <div className="mb-2 flex items-center justify-between">
-              <span className="text-sm font-medium">Select size</span>
-              {error && <span className="text-sm text-sale">Please choose a size</span>}
+          {/* Size */}
+          <div className="mt-9">
+            <div className="mb-3 flex items-center justify-between">
+              <span className="eyebrow">Select size</span>
+              {error && (
+                <span className="font-mono text-[0.7rem] uppercase tracking-[0.12em] text-madder">
+                  Choose a size
+                </span>
+              )}
             </div>
-            <SizeSelector sizes={product.sizes} selected={size} onSelect={(s) => { setSize(s); setError(false) }} />
+            <SizeSelector
+              sizes={product.sizes}
+              selected={size}
+              onSelect={(s) => {
+                setSize(s)
+                setError(false)
+              }}
+            />
           </div>
 
+          {/* Actions */}
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <QuantityStepper qty={qty} onChange={setQty} />
             <button
               type="button"
               onClick={handleAdd}
-              className="flex-1 rounded-full bg-brand px-8 py-3 text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-brand-soft sm:flex-none"
+              className="flex-1 rounded-full bg-ink px-8 py-3.5 font-mono text-xs uppercase tracking-[0.15em] text-paper transition-transform hover:-translate-y-0.5 sm:flex-none"
             >
               Add to cart
             </button>
           </div>
 
           {added && (
-            <p className="mt-4 rounded-md bg-cream px-4 py-3 text-sm" role="status">
-              Added to cart.{' '}
-              <Link to="/cart" className="font-medium text-accent hover:underline">
-                View cart
+            <p className="mt-4 rounded-sm bg-ecru px-4 py-3 font-mono text-[0.72rem] uppercase tracking-[0.1em]" role="status">
+              Added to cart ·{' '}
+              <Link to="/cart" className="text-woad hover:text-ink">
+                View cart →
               </Link>
             </p>
           )}
+
+          {/* Mill-ticket spec table */}
+          <dl className="mt-10 border-t border-ink/15">
+            {spec.map(([k, v]) => (
+              <div key={k} className="flex justify-between border-b border-ink/10 py-3">
+                <dt className="font-mono text-[0.7rem] uppercase tracking-[0.14em] text-muted">{k}</dt>
+                <dd className="font-mono text-[0.78rem] text-ink">{v}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </div>
     </div>

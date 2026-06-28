@@ -34,46 +34,51 @@ export function CategoryPage() {
 
   if (!category) {
     return (
-      <div className="mx-auto max-w-7xl px-4 py-20 text-center sm:px-6">
+      <div className="mx-auto max-w-7xl px-4 py-24 text-center sm:px-6">
         <h1 className="font-display text-3xl font-semibold">Category not found</h1>
-        <Link to="/" className="mt-4 inline-block text-accent hover:underline">
-          Back to home
+        <Link to="/" className="mt-4 inline-block font-mono text-xs uppercase tracking-[0.14em] text-woad hover:text-ink">
+          ← Back to home
         </Link>
       </div>
     )
   }
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6">
-      <header className="mb-8 text-center">
-        <h1 className="font-display text-4xl font-semibold">{category.name}</h1>
-        {category.description && <p className="mt-3 text-muted">{category.description}</p>}
+    <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
+      {/* Header */}
+      <header>
+        <p className="eyebrow">
+          Collection · {String(allProducts.length).padStart(2, '0')} pieces
+        </p>
+        <h1 className="mt-2 font-display text-4xl font-semibold tracking-tight sm:text-5xl">
+          {category.name}
+        </h1>
+        {category.description && (
+          <p className="mt-3 max-w-xl text-muted">{category.description}</p>
+        )}
+        <div className="cutline mt-6 text-ink" />
       </header>
 
       {/* Filters */}
-      <div className="mb-8 flex flex-col gap-4 border-y border-black/10 py-4 sm:flex-row sm:items-center sm:justify-between">
+      <div className="mb-10 mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex flex-wrap items-center gap-2">
-          <span className="text-sm text-muted">Size:</span>
+          <span className="eyebrow mr-1">Size</span>
           <FilterChip active={sizeFilter === null} onClick={() => setSizeFilter(null)}>
             All
           </FilterChip>
           {availableSizes.map((size) => (
-            <FilterChip
-              key={size}
-              active={sizeFilter === size}
-              onClick={() => setSizeFilter(size)}
-            >
+            <FilterChip key={size} active={sizeFilter === size} onClick={() => setSizeFilter(size)}>
               {size}
             </FilterChip>
           ))}
         </div>
 
-        <label className="flex items-center gap-2 text-sm text-muted">
+        <label className="flex items-center gap-2 font-mono text-[0.7rem] uppercase tracking-[0.14em] text-muted">
           Sort
           <select
             value={sort}
             onChange={(e) => setSort(e.target.value as SortKey)}
-            className="rounded-md border border-black/20 px-3 py-1.5 text-sm text-ink"
+            className="rounded-sm border border-ink/20 bg-paper px-3 py-1.5 font-mono text-xs text-ink"
           >
             <option value="featured">Featured</option>
             <option value="price-asc">Price: Low to High</option>
@@ -83,7 +88,9 @@ export function CategoryPage() {
       </div>
 
       {products.length === 0 ? (
-        <p className="py-16 text-center text-muted">No products match your filters.</p>
+        <p className="py-20 text-center font-mono text-sm uppercase tracking-[0.14em] text-muted">
+          No pieces match your filters.
+        </p>
       ) : (
         <ProductGrid products={products} />
       )}
@@ -106,8 +113,8 @@ function FilterChip({
       onClick={onClick}
       aria-pressed={active}
       className={
-        'rounded-full border px-3 py-1 text-sm transition-colors ' +
-        (active ? 'border-brand bg-brand text-white' : 'border-black/20 hover:border-brand')
+        'rounded-full border px-3.5 py-1 font-mono text-[0.7rem] uppercase tracking-[0.1em] transition-colors ' +
+        (active ? 'border-ink bg-ink text-paper' : 'border-ink/20 text-ink hover:border-ink')
       }
     >
       {children}

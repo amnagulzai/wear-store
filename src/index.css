@@ -1,19 +1,27 @@
 @import 'tailwindcss';
 
-/* Brand theme tokens — change these to restyle the whole store.
-   Tailwind v4 reads @theme variables to generate utilities like
-   bg-brand, text-ink, font-display, etc. */
+/* ────────────────────────────────────────────────────────────────
+   WEAR — "indigo dye house" identity.
+   Palette and type are drawn from the subject: a textile/atelier
+   world of unstitched cloth, mill tickets, and pattern cut-lines.
+   Change tokens here to restyle the whole store.
+   ──────────────────────────────────────────────────────────────── */
 @theme {
-  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
-  --font-display: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-mono: 'Spline Sans Mono', ui-monospace, monospace;
 
-  --color-brand: #1a1a1a;
-  --color-brand-soft: #4b4b4b;
-  --color-ink: #171717;
-  --color-muted: #6b7280;
-  --color-cream: #f7f5f1;
-  --color-accent: #b08968;
-  --color-sale: #c0392b;
+  --color-paper: #fbfaf6; /* base background — warm white, not cream */
+  --color-ecru: #ece5d6; /* inset panels, swatch grounds */
+  --color-ecru-deep: #ded3bd;
+  --color-ink: #1d2347; /* primary indigo ink */
+  --color-deep: #12152e; /* hero & footer fields */
+  --color-woad: #3b4aa0; /* links, active, focus — vivid indigo */
+  --color-marigold: #d99a2b; /* single warm accent / selvedge */
+  --color-madder: #b23a2e; /* sale only */
+  --color-muted: #5b6072; /* secondary text */
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 @layer base {
@@ -22,10 +30,70 @@
   }
 
   body {
-    @apply bg-white text-ink font-sans antialiased;
+    @apply bg-paper text-ink font-sans antialiased;
+    font-feature-settings: 'ss01';
   }
 
   a {
     @apply no-underline text-inherit;
+  }
+
+  /* Indigo selection — part of the identity, not a default */
+  ::selection {
+    background: var(--color-ink);
+    color: var(--color-paper);
+  }
+
+  /* Visible, on-brand keyboard focus */
+  :focus-visible {
+    outline: 2px solid var(--color-woad);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* The signature: a mono "mill ticket" eyebrow used across the site. */
+  .eyebrow {
+    @apply font-mono text-[0.7rem] uppercase tracking-[0.22em] text-muted;
+  }
+
+  /* Sewing-pattern cut line — the key structural divider. */
+  .cutline {
+    height: 1px;
+    background-image: repeating-linear-gradient(
+      to right,
+      currentColor 0,
+      currentColor 6px,
+      transparent 6px,
+      transparent 12px
+    );
+    opacity: 0.35;
+  }
+
+  /* Page-load + scroll reveal */
+  .reveal {
+    animation: reveal 0.7s var(--ease-out-soft) both;
+  }
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

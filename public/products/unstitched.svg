@@ -1,7 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="700" viewBox="0 0 900 700" role="img" aria-label="Unstitched">
-  <rect width="900" height="700" fill="#a8b0bc"/>
-  <g fill="#525a66" opacity="0.85">
-    <path d="M450 150c-60 0-110 40-126 96l-120 48c-18 8-26 28-17 47l52 100c8 16 27 23 43 15l36-18v320h264V438l36 18c16 8 35 1 43-15l52-100c9-19 1-39-17-47l-120-48c-16-56-66-96-126-96z"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="680" viewBox="0 0 900 680" role="img" aria-label="Unstitched">
+  <defs><pattern id="twill" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="14" stroke="#ffffff" stroke-width="6" opacity="0.06"/>
+    </pattern></defs>
+  <rect width="900" height="680" fill="#3b4aa0"/>
+  <rect width="900" height="680" fill="url(#twill)"/>
+
+  <!-- selvedge stripe -->
+  <rect x="0" y="0" width="10" height="680" fill="#d99a2b"/>
+
+  <!-- grain-line marker (textile cut symbol) -->
+  <g stroke="#f7f4ec" stroke-width="2" fill="none" opacity="0.55">
+    <line x1="450" y1="204" x2="450" y2="421.6"/>
+    <path d="M441 218 L450 204 L459 218"/>
+    <path d="M441 407.6 L450 421.6 L459 407.6"/>
   </g>
-  <text x="450" y="640" font-family="Georgia, serif" font-size="44" fill="#ffffff" text-anchor="middle">Unstitched</text>
+
+  <!-- mill-ticket strip -->
+  <rect x="0" y="585" width="900" height="95" fill="#f7f4ec"/>
+  <rect x="0" y="585" width="10" height="95" fill="#d99a2b"/>
+  <text x="34" y="628.5" font-family="'Fraunces', Georgia, serif" font-size="31" font-weight="600" fill="#1d2347">Unstitched</text>
+  <text x="34" y="659.5" font-family="'Spline Sans Mono', monospace" font-size="18" letter-spacing="2" fill="#1d2347" opacity="0.8">UNS · BY THE METRE</text>
 </svg>

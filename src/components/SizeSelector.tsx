@@ -20,10 +20,10 @@ export function SizeSelector({
             onClick={() => onSelect(size)}
             aria-pressed={isSelected}
             className={clsx(
-              'min-w-12 rounded-md border px-4 py-2 text-sm font-medium transition-colors',
+              'min-w-12 rounded-sm border px-4 py-2 font-mono text-xs uppercase tracking-[0.1em] transition-colors',
               isSelected
-                ? 'border-brand bg-brand text-white'
-                : 'border-black/20 text-ink hover:border-brand',
+                ? 'border-ink bg-ink text-paper'
+                : 'border-ink/20 text-ink hover:border-ink',
             )}
           >
             {size}

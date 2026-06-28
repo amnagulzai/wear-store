@@ -17,24 +17,20 @@ export function Price({
 
   if (product.price == null && product.salePrice == null) {
     return (
-      <span className={clsx('text-muted', big ? 'text-lg' : 'text-sm', className)}>Coming soon</span>
+      <span className={clsx('font-mono uppercase tracking-[0.12em] text-muted', big ? 'text-sm' : 'text-[0.7rem]', className)}>
+        Price soon
+      </span>
     )
   }
 
   return (
-    <span className={clsx('inline-flex items-baseline gap-2', className)}>
+    <span className={clsx('inline-flex items-baseline gap-2 font-mono tabular-nums', className)}>
       {onSale && (
-        <span className={clsx('text-muted line-through', big ? 'text-base' : 'text-sm')}>
+        <span className={clsx('text-muted line-through', big ? 'text-base' : 'text-xs')}>
           {formatPrice(product.price)}
         </span>
       )}
-      <span
-        className={clsx(
-          'font-medium',
-          onSale && 'text-sale',
-          big ? 'text-xl' : 'text-sm',
-        )}
-      >
+      <span className={clsx(onSale ? 'text-madder' : 'text-ink', big ? 'text-lg' : 'text-sm')}>
         {formatPrice(onSale ? product.salePrice : product.price)}
       </span>
     </span>
