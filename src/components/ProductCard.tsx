@@ -13,7 +13,7 @@ export function ProductCard({ product }: { product: Product }) {
           src={product.images[0]}
           alt={product.name}
           loading="lazy"
-          className="aspect-4/5 w-full object-cover transition-transform duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]"
+          className="aspect-4/5 w-full object-cover object-top transition-transform duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]"
         />
         <div className="absolute left-2.5 top-2.5 flex gap-1.5">
           {product.isNew && <Badge variant="new" />}

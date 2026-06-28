@@ -73,7 +73,7 @@ export function ProductPage() {
             <img
               src={product.images[activeImage]}
               alt={product.name}
-              className="aspect-4/5 w-full object-cover"
+              className="aspect-4/5 w-full object-cover object-top"
             />
           </div>
           {product.images.length > 1 && (
