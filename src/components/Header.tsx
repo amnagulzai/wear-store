@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router-dom'
 import clsx from 'clsx'
 import { categories } from '../data'
 import { useCart } from '../cart/useCart'
+import { Wordmark } from './Wordmark'
 
 export function Header() {
   const { count } = useCart()
@@ -31,10 +32,8 @@ export function Header() {
             <BurgerIcon open={menuOpen} />
           </button>
 
-          <Link to="/" className="group flex items-baseline gap-2">
-            <span className="font-display text-2xl font-semibold leading-none tracking-tight text-ink">
-              Wear Happiness
-            </span>
+          <Link to="/" className="group">
+            <Wordmark className="text-2xl leading-none" />
           </Link>
 
           <nav className="hidden items-center gap-8 md:flex">

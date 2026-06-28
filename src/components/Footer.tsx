@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { categories } from '../data'
+import { Wordmark } from './Wordmark'
 
 export function Footer() {
   return (
@@ -16,7 +17,7 @@ export function Footer() {
 
         <div className="grid gap-12 md:grid-cols-4">
           <div>
-            <p className="font-display text-3xl font-semibold tracking-tight">Wear Happiness</p>
+            <Wordmark className="text-3xl" tone="paper" />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-paper/70">
               An indigo house of ready-to-wear, unstitched cloth, and the accessories that finish a
               look.

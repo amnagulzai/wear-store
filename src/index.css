@@ -97,3 +97,19 @@
     transform: translateY(0);
   }
 }
+
+/* Joyful per-letter bounce for the "Happiness" wordmark. A short hop early
+   in the cycle, staggered per letter, makes the word ripple then rest. */
+@keyframes letter-jump {
+  0%,
+  28%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  10% {
+    transform: translateY(-0.36em) rotate(-6deg);
+  }
+  19% {
+    transform: translateY(0) rotate(4deg);
+  }
+}

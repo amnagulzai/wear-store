@@ -48,17 +48,17 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Signature: an offset swatch ticket */}
+        {/* Featured lookbook image, framed on the indigo field */}
         <div className="reveal hidden justify-self-end lg:block" style={{ animationDelay: '0.36s' }}>
-          <figure className="w-72 rotate-2 overflow-hidden rounded-sm bg-paper shadow-2xl ring-1 ring-black/5 transition-transform duration-500 hover:rotate-0">
+          <figure className="w-80 overflow-hidden rounded-sm border-4 border-marigold bg-paper shadow-2xl">
             <img
-              src="/products/unstitched-lawn.svg"
-              alt="Featured fabric — Printed Lawn 3-Piece"
-              className="aspect-4/5 w-full object-cover"
+              src="/products/banner-image.jpeg"
+              alt="SS26 lookbook — indigo damask print dress"
+              className="aspect-[17/20] w-full object-cover object-bottom"
             />
             <figcaption className="flex items-center justify-between px-4 py-3 font-mono text-[0.62rem] uppercase tracking-[0.14em] text-ink">
-              <span>Swatch № WS-2405</span>
-              <span className="text-marigold">100% Lawn</span>
+              <span>SS26 Lookbook</span>
+              <span className="text-marigold">Indigo Damask</span>
             </figcaption>
           </figure>
         </div>
