@@ -12,7 +12,7 @@ export function CategoryTile({ category }: { category: Category }) {
           src={category.image}
           alt={category.name}
           loading="lazy"
-          className="aspect-4/3 w-full object-cover transition-transform duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]"
+          className="aspect-4/3 w-full object-cover object-top transition-transform duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]"
         />
       ) : (
         <div className="aspect-4/3 w-full bg-ink" />

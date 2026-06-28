@@ -21,9 +21,9 @@ export function Hero() {
             className="reveal mt-6 font-display text-5xl font-semibold leading-[0.95] tracking-tight sm:text-7xl"
             style={{ animationDelay: '0.12s' }}
           >
-            Cloth,
+            Wear Your
             <br />
-            considered.
+            Happiness
           </h1>
           <p
             className="reveal mt-6 max-w-md text-base leading-relaxed text-paper/75"
@@ -49,16 +49,19 @@ export function Hero() {
         </div>
 
         {/* Featured lookbook image, framed on the indigo field */}
-        <div className="reveal hidden justify-self-end lg:block" style={{ animationDelay: '0.36s' }}>
-          <figure className="w-80 overflow-hidden rounded-sm border-4 border-marigold bg-paper shadow-2xl">
+        <div
+          className="reveal flex justify-center lg:block lg:justify-self-end"
+          style={{ animationDelay: '0.36s' }}
+        >
+          <figure className="w-64 overflow-hidden rounded-sm border-4 border-marigold bg-paper shadow-2xl sm:w-72 lg:w-80">
             <img
-              src="/products/banner-image.jpeg"
-              alt="SS26 lookbook — indigo damask print dress"
-              className="aspect-[17/20] w-full object-cover object-bottom"
+              src="/products/hero-model.jpg"
+              alt="SS26 lookbook — blue floral embroidered gown"
+              className="aspect-3/4 w-full object-cover"
             />
             <figcaption className="flex items-center justify-between px-4 py-3 font-mono text-[0.62rem] uppercase tracking-[0.14em] text-ink">
               <span>SS26 Lookbook</span>
-              <span className="text-marigold">Indigo Damask</span>
+              <span className="text-marigold">Blue Floral</span>
             </figcaption>
           </figure>
         </div>

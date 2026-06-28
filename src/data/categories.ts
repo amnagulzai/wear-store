@@ -12,19 +12,19 @@ export const categories: Category[] = [
     slug: 'ready-to-wear',
     name: 'Ready-to-Wear',
     description: 'Effortless, stitched pieces ready to step out in.',
-    image: '/products/ready-to-wear.svg',
+    image: '/products/cat-ready-to-wear.jpg',
   },
   {
     slug: 'unstitched',
     name: 'Unstitched',
     description: 'Premium fabrics to tailor exactly to you.',
-    image: '/products/unstitched.svg',
+    image: '/products/cat-unstitched.jpg',
   },
   {
     slug: 'accessories',
     name: 'Accessories',
     description: 'Finishing touches — wraps, scarves and more.',
-    image: '/products/accessories.svg',
+    image: '/products/cat-accessories.jpg',
   },
   {
     slug: 'sale',
