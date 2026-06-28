@@ -20,6 +20,7 @@ import type { Product } from '../types'
 const RTW_SIZES = ['XS', 'S', 'M', 'L', 'XL']
 const UNSTITCHED_SIZES = ['Unstitched']
 const ONE_SIZE = ['One Size']
+const RING_SIZES = ['6', '7', '8', '9']
 
 export const products: Product[] = [
   {
@@ -57,7 +58,7 @@ export const products: Product[] = [
     material: 'Viscose Blend',
     description:
       'High-rise wide-leg trousers with a fluid drape and a concealed side zip. Designed to move with you.',
-    images: ['/products/wide-trousers.svg'],
+    images: ['/products/wide-trousers.jpg'],
     sizes: RTW_SIZES,
   },
   {
@@ -176,16 +177,56 @@ export const products: Product[] = [
     isSale: true,
   },
   {
-    id: 'p-2407',
-    name: 'Merino Wool Scarf',
-    slug: 'merino-wool-scarf',
+    id: 'p-wa01',
+    name: 'Just a Girl Slogan Cap',
+    slug: 'just-a-girl-slogan-cap',
     categorySlug: 'accessories',
-    styleCode: 'WS-2407',
-    material: '100% Merino Wool',
+    styleCode: 'WA-01',
+    material: 'Cotton & Suede Brim',
     description:
-      'A finely woven merino wool scarf with fringed ends. Warm, lightweight and endlessly wrappable.',
-    images: ['/products/wool-scarf.svg'],
+      'A washed cotton cap with a contrast suede brim and "Literally Just a Girl" script embroidery. A playful finish to any look.',
+    images: ['/products/cap-1.jpg'],
     sizes: ONE_SIZE,
+    isNew: true,
+  },
+  {
+    id: 'p-wa02',
+    name: 'Pink Kitty Cap',
+    slug: 'pink-kitty-cap',
+    categorySlug: 'accessories',
+    styleCode: 'WA-02',
+    material: 'Cotton Twill',
+    description:
+      'A soft pink baseball cap with a sweet embroidered kitty patch and an adjustable closure.',
+    images: ['/products/cap-2.jpg'],
+    sizes: ONE_SIZE,
+    isNew: true,
+  },
+  {
+    id: 'p-wa03',
+    name: 'Gold Leaf Ring',
+    slug: 'gold-leaf-ring',
+    categorySlug: 'accessories',
+    styleCode: 'WA-03',
+    material: 'Gold-Plated Brass',
+    description:
+      'A delicate gold-plated open ring with a crystal-set leaf vine that wraps the finger. Light, pretty and easy to wear.',
+    images: ['/products/ring-1.jpg'],
+    sizes: RING_SIZES,
+    price: 2500,
+  },
+  {
+    id: 'p-wa04',
+    name: 'Silver Leaf Ring',
+    slug: 'silver-leaf-ring',
+    categorySlug: 'accessories',
+    styleCode: 'WA-04',
+    material: 'Sterling Silver',
+    description:
+      'A dainty sterling silver open ring with a crystal-set leaf vine — adjustable and quietly elegant, every day.',
+    images: ['/products/ring-2.jpg'],
+    sizes: RING_SIZES,
+    price: 2500,
   },
   {
     id: 'p-2408',
