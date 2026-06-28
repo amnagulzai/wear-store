@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000" role="img" aria-label="Wide Trousers">
+  <rect width="800" height="1000" fill="#9aa7b8"/>
+  <g fill="#46525f" opacity="0.9">
+    <path d="M400 210c-46 0-84 30-96 72l-92 36c-14 6-20 22-13 36l40 78c6 12 21 17 33 11l28-14v320c0 13 11 24 24 24h252c13 0 24-11 24-24V429l28 14c12 6 27 1 33-11l40-78c7-14 1-30-13-36l-92-36c-12-42-50-72-96-72z"/>
+  </g>
+  <circle cx="400" cy="180" r="40" fill="#46525f" opacity="0.9"/>
+  <text x="400" y="900" font-family="Georgia, serif" font-size="46" fill="#ffffff" text-anchor="middle" opacity="0.95">Wide Trousers</text>
+  <text x="400" y="950" font-family="Inter, sans-serif" font-size="26" fill="#ffffff" text-anchor="middle" opacity="0.7" letter-spacing="3">WS-2403</text>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="700" viewBox="0 0 900 700" role="img" aria-label="Accessories">
+  <rect width="900" height="700" fill="#c2a9a0"/>
+  <g fill="#6c534a" opacity="0.85">
+    <path d="M450 150c-60 0-110 40-126 96l-120 48c-18 8-26 28-17 47l52 100c8 16 27 23 43 15l36-18v320h264V438l36 18c16 8 35 1 43-15l52-100c9-19 1-39-17-47l-120-48c-16-56-66-96-126-96z"/>
+  </g>
+  <text x="450" y="640" font-family="Georgia, serif" font-size="44" fill="#ffffff" text-anchor="middle">Accessories</text>
+</svg>
