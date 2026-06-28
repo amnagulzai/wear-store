@@ -31,7 +31,7 @@ export const products: Product[] = [
     material: '100% European Linen',
     description:
       'A breathable, relaxed-fit linen shirt with a clean collar and mother-of-pearl buttons. An everyday staple that wears well from desk to dinner.',
-    images: ['/products/linen-shirt.svg'],
+    images: ['/products/linen-shirt.jpg'],
     sizes: RTW_SIZES,
     isNew: true,
   },
