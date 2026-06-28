@@ -69,7 +69,7 @@ export const products: Product[] = [
     material: '100% Mulberry Silk',
     description:
       'A lustrous silk tunic with a relaxed silhouette and side slits. Quietly luxe, endlessly versatile.',
-    images: ['/products/silk-tunic.svg'],
+    images: ['/products/silk-tunic.jpg'],
     sizes: RTW_SIZES,
     isSale: true,
   },
